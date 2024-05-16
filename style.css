@@ -1,0 +1,282 @@
+#Navigation li{
+    padding: 5px 55px;
+    list-style: none;
+    text-decoration: none;
+    font-size: 20px;
+    float: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    margin: 0 ;
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+nav {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+  
+
+nav ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+  
+nav ul a{
+    text-decoration: none;
+    color: #000000;
+}
+nav img{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}.slideshow-container {
+    position: relative;
+    max-width: 1366px;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 786px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    margin-top: -22px;
+    padding: 16px;
+    color: rgb(1, 1, 17);
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 237, 237, 0.8);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}.slideshow-container {
+    position: relative;
+    max-width: 1366px;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 786px;
+}
+.image-gallery {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: left; 
+    gap: 10px; 
+   }
+
+   .image-gallery figure {
+   display: inline-block; 
+   text-align: center; 
+   margin: 10px; 
+   width: calc(25% - 45px);
+   }
+   .image-gallery figure img{
+      height: 250px;
+   }
+
+   .image-gallery figcaption {
+   font-size: 14px; 
+   margin-top: 10px;
+   padding: 0 70px; 
+   }
+
+
+  body{
+    background-color: #dfd9d9;
+    color: #000000;
+    font-family: sans-serif;
+    size: 20px;
+  } p{
+    font-size: 24px;
+    }
+
+    p1{
+       float: left;
+    }
+    p img{
+    position: relative;
+    padding: 20px ;
+    margin-right: 20px;
+    }
+    figure {
+     display: flex;
+     flex-direction: column;
+     align-items: left;
+    }
+
+    figure img {
+    max-width: 150%;
+    height: auto;
+
+    }
+
+    figcaption{
+       font-size: 24px;
+       left: 0px;
+       text-align: left;
+
+    }
+    
+    .container {
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+      }
+      
+     
+      .picture {
+        flex-basis: 40%; 
+      }
+      
+      
+      .content {
+        flex-basis: 100%; 
+      }
+      
+      
+      aside {
+        float: right; 
+        margin-left: 20px; 
+      }
+
+  footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.social-media-links {
+    display: inline-block;
+}
+
+.social-media-links a {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.social-media-links a img {
+    height: 40px;
+    width: auto;
+}
+
+
+h2 {
+text-align: center;
+color: white;
+}
+
+label {
+font-size: 16px;
+font-weight: bold;
+margin-bottom: 5px;
+color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+border-radius: 50px;
+ border: 5px solid #ccc;
+padding: 5px;
+font-size: 16px;
+width: 30%;
+margin-bottom: 5px;
+box-sizing: content-box;
+align-items: center;
+}
+
+input[type="submit"] {
+background-color: #333;
+color: black;
+border: 50px;
+padding: 10px 20px;
+border-radius: 3px;
+font-size: 16px;
+cursor: pointer;
+}
+
+input[type="submit"]:hover {
+background-color: #666;
+}
+
+.rating-stars {
+display: inline-block;
+width: 120px;
+font-size: 0;
+white-space: nowrap;
+cursor: pointer;
+overflow: hidden;
+}
+
+.rating-stars > input {
+display: none;
+}
+
+.rating-stars > label {
+ display: inline-block;
+position: relative;
+width: 20px;
+height: 20px;
+margin: 0px 2px;
+ background-color: transparent;
+}
+
+.rating-stars > label:before {
+content: "\2605";
+position: absolute;
+top: 0;
+left: 0;
+font-size: 25px;
+color: #ccc;
+}
+
+.rating-stars > input:checked ~ label:before,
+.rating-stars > label:hover:before {
+ color: #ffbf00;
+}

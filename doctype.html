@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIES</title>
+    <style>
+        .slideshow-container {
+            position: relative;
+            max-width: 1336Px;
+            height: 750px;
+            margin: auto;
+            
+        }
+        .mySlides {
+            display: none;
+        }
+        .mySlides img {
+            width: 100%;
+            height: 80%;
+            
+        }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            margin-top: -22px; 
+            padding: 16px;
+            color: rgb(255, 246, 246);
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            cursor: pointer;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgb(141, 138, 138);
+        }
+        .fade {
+            animation-name: fade;
+            animation-duration: 1s;
+        }
+        @keyframes fade {
+            from {
+                opacity: 0.4;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+       
+        body {
+            font-family: Arial, sans-serif;
+            background-color: hwb(0 0% 100%);
+        }
+
+        /* Styles for the navigation bar */
+        nav {
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex; /* Display items in a flex container */
+        }
+
+        nav ul li {
+            flex-grow: 1; /* Allow items to grow and fill the available space */
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 18px; /* Larger font size */
+            font-weight: bold; /* Bold text */
+        }
+
+        nav ul li a:hover {
+            background-color: #0c56c9;
+        }
+
+        .logo {
+            margin-left: 20px; /* Add margin to the left for logo */
+        }
+
+        /* Styles for the image gallery */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap into multiple lines */
+            justify-content: space-between; /* Space between items */
+            max-width: 1366px;
+            margin: auto;
+            padding: 20px 0; /* Add some space above and below the gallery */
+        }
+
+        .image-gallery figure {
+            width: 22%; /* Each image takes up 22% of the container */
+            margin-bottom: 20px; /* Add some space between rows */
+            text-align: center; /* Center the image */
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        .image-gallery figcaption {
+            font-size: 14px;
+            margin-top: 10px;
+            color: white;
+        }
+    
+    
+
+        /* Image Gallery Styles */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1230Px;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        .image-gallery figure {
+            width: 22%;
+            margin-bottom: 20px;
+            text-align: center;
+            transition: transform 0.3s ease; /* Transition for zoom effect */
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        .image-gallery figcaption {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* Zoom effect on hover */
+        .image-gallery figure:hover {
+            transform: scale(1.05); /* Zoom in by 5% */
+        }
+
+        /* Additional styles for the new slideshow */
+        .top-slideshow-container {
+            position: relative;
+            max-width: 1366px;
+            margin: auto;
+            margin-bottom: 20px; /* Add space between slideshows */
+        }
+
+        .top-slideshow-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .top-slideshow-container .prev,
+        .top-slideshow-container .next {
+            /* Adjust as needed */
+            top: 50%;
+            margin-top: -22px; 
+            padding: 16px;
+            color: rgb(255, 245, 245);
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        .top-slideshow-container .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .top-slideshow-container .prev:hover,
+        .top-slideshow-container .next:hover {
+            background-color: rgb(230, 221, 221);
+        }
+        .most-streamed-container {
+        max-width: 1080px;
+        margin: auto;
+        text-align: center; /* Center the content */
+    }
+    .most-streamed-title {
+        color: white;
+    }
+    .social-media-links {
+            text-align: center; /* Center the links */
+            margin-top: 20px; /* Add some top margin for spacing */
+        }
+
+        .social-media-links a {
+            display: inline-block; /* Display links in a row */
+            margin: 0 10px; /* Add margin between links */
+        }
+
+        .social-media-links img {
+            height: 50px; /* Set the height of icons */
+        }
+
+    </style>
+</style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <a href="index.html" class="logo"><img src="logo.png" alt="Warner Bros Logo" height="40px"></a>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="tvshows.html">TV Shows</a></li>
+        <li><a href="gamesand apps.html">Games & Apps</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+</nav>
+
+<div class="slideshow-container">
+  <div class="mySlides fade">
+      <a href="shazam.mp4"><img src="wp12092461-shazam-fury-of-the-gods-movie-wallpapers.jpg">
+  </div>
+  <div class="mySlides fade">
+      <img src="Poster-Dune-2-ScreenX-destaca-os-dois-lados-da-guerra.webp">
+  </div>
+  <div class="mySlides fade">
+      <img src="gothamknights.jpg">
+  </div>
+      
+</div>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+    
+    <h1 style="color: white ;"text-align="CENTRE">Most Streamed</h1>
+   
+
+<br>
+<p>
+
+       
+    </h1>
+</p>
+
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+    }
+</script>
+
+
+
+<p>
+    <h1>WHAT'S HOT</h1>
+    <div class="image-gallery">
+        <figure>
+            <img src="spider-man-across-the-spider-verse.jpg" alt="SHAZAM: FURY OF THE GODS MOVIE" height="250px"></a>
+            <figcaption>SHAZAM</figcaption>
+        </figure>
+        <figure>
+            <img src="the-monkey-king-2023.jpg" alt="KING RICHARD MOVIE" height="250px">
+            <figcaption>THE MONKEY KING</figcaption>
+        </figure>
+        <figure>
+            <img src="the-flash-2023.jpg" alt="DUNE MOVIE" height="250px">
+            <figcaption>THE FLASH</figcaption>
+        </figure>
+        <figure>
+            <img src="cf329e5f-d84e-436d-b00e-f9d0c4eaef6d.jpeg" alt="THE MATRIX RESURRECTIONS MOVIE" height="250px">
+            <figcaption>THE MATRIX RESURRECTIONS</figcaption>
+        </figure>
+        <figure>
+            <img src="I'm Vengeance- Best Quotes From The Batman (2022).png" alt="THE BATMAN MOVIE" height="250px">
+            <figcaption>THE BATMAN</figcaption>
+        </figure>
+        <figure>
+            <img src="blackadam.jpeg" alt="BLACK ADAM MOVIE" height="250px">
+            <figcaption>BLACK ADAM</figcaption>
+        </figure>
+        <figure>
+            <img src="SPIDEMAN.avif" alt="DC LEAGUE OF SUPER PETS MOVIE" height="250px">
+            <figcaption>NINJA TUTLES</figcaption>
+        </figure>
+        <figure>
+            <img src="King Richard Spoiler Free Movie Review.jpeg" alt="FANTASTIC BEASTS MOVIE" height="250px">
+            <figcaption>KING RICHARD</figcaption>
+        </figure>
+        <div  class="myslides">
+            <image src ="Screenshot (30).png">
+            </div>
+
+
+    </div>
+</p>
+
+
+<br>
+
+
+<p>
+    <h1>NEW RELEASES</h1>
+
+    <div class="image-gallery">
+        <figure>
+            <img src="road house.jpg" alt="Road house" height="250px"></a>
+            <figcaption>Road house</figcaption>
+        </figure>
+        <figure>
+            <img src="casablanca.jpeg" alt="WRATH OF MAN MOVIE" height="250px">
+            <figcaption>Casablanca</figcaption>
+        </figure>
+        <figure>
+            <img src="hypnotic-2023.jpg" alt="hypnotic-2023" height="250px">
+            <figcaption>HYPNOTIC</figcaption>
+        </figure>
+        <figure>
+            <img src="bob marley.jpg" alt="bob marley" height="250px">
+            <figcaption>BOB MARLEY</figcaption>
+        </figure>
+        <figure>
+            <img src="sleeping dogs.jpg" alt="TOM AND JERRY MOVIE" height="250px">
+            <figcapti>SLEEPING DOGS</figcaption>
+        </figure>
+        <figure>
+            <img src="teenage-mutant-ninja-turtles-mutant-mayhem-2023.jpg" alt="JUDAS AND THE BLACK MESSIAH MOVIE" height="250px">
+            <figcaption>TEENAGE</figcaption>
+        </figure>
+        <figure>
+            <img src="the-collective-2023.jpg" alt="THE LITTLE THINGS MOVIE" height="250px">
+            <figcaption>THE COLLECTIVE<figcaption>
+        </figure>
+        <figure>
+            <img src="damsel.jpg" alt="WONDER WOMAN 1984 MOVIE" height="250px">
+            <figcaption>DAMSEL</figcaption>
+        </figure>
+    </div>
+
+
+<footer>
+    <div class="social-media-links">
+        <a href="https://www.youtube.com/user/WarnerBrosPictures/"><img src="youtube-logo.png" alt="YouTube"height="80px"float="center"></a>
+        <a href="https://www.facebook.com/warnerbrosent/"><img src="facebook-logo.png" alt="Facebook"height="50px"float="center"></a>
+        <a href="https://twitter.com/Warnerbros/"><img src="twitter-logo.png" alt="Twitter"height="50px"float="center"></a>
+        <a href="https://www.instagram.com/warnerbrosentertainment/"><img src="instagram-logo.png" alt="Instagram"height="50px"float="cente"></a>
+    </div>
+</footer>
+
+
+</html>
+
+
